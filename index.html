@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Nota de pedidos Tren</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<style>
+    img {
+    width: 100%;
+} 
+
+.display-5 {
+    color: rgb(29,137,202);
+}
+
+.check {
+    width: 120px;
+    height: 25px;
+}
+
+body {
+    background-image: url(data/fondo.png);
+}
+
+input[type=checkbox]{
+    -ms-transform: scale(2); 
+    -moz-transform: scale(2); 
+    -webkit-transform: scale(2); 
+    -o-transform: scale(2); 
+    padding: 10px;
+    margin: 20px;
+}
+
+
+.input-name {
+    width: 100%;
+    height: 6vh;
+    margin: auto;
+}
+
+.input-direccion {
+    width: 72%;
+    height: 6vh;
+    margin: auto;
+}
+
+#vendedor {
+    width: 70%;
+    height: 6vh;
+    margin: auto;
+}
+
+.input-email {
+    width: 80%;
+    height: 6vh;
+    margin: 0;
+}
+
+.input-phonoe {
+    width: 67%;
+    height: 6vh;
+    margin: auto;
+}
+
+#botones {
+    margin: auto;
+}
+
+#imprimir {
+    width: 30%;
+    margin: 1em;
+}
+#enviar {
+    width: 30%;
+    margin: 1em;
+}
+
+.input-datos3 {
+    height: 7vh;
+}
+#telefono {
+    height: 7vh;
+}
+
+#azul {
+    background: rgb(29,137,202);
+    width: 98%;
+    height: auto;
+    }
+ul li {
+    list-style: none;
+    
+}
+#footer {
+    color: white;
+}  
+.tren {
+    font-style: arial;
+    margin-bottom: -10px;
+}
+
+@media print {
+    body {
+        width: 90%;
+    }
+.linea-oculta {
+    display: none;
+}
+.linea {
+    display: block;
+    background: white;
+}
+.input {
+    width: 90%;
+    height: 5vh; 
+}
+}
+
+@media screen and (max-width: 1024px) {
+    input.input {
+        width: 80%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .input-name {
+        width: auto;
+        margin: 0;
+    }
+    .input-direccion{
+        width: auto;
+        margin: 0;
+    }
+    
+    .check {
+        width: 50px;
+        margin: 5px;
+    }
+    .input-datos3 {
+        width: auto;
+        height: 6vh;
+    }
+    .input-phone {
+        width: auto;
+        height: 6vh;
+    }
+    .input-email{
+        width: auto;
+    }
+    #vendedor {
+        width: auto;
+        margin: 0;
+    }
+}
+
+
+
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+    <img src="data/header.png" alt="header">
+    <img src="data/banner.png" alt="">
+</div>
+<div class="container" style="background:white">
+<form action="correo.php" id="contactform"
+name="contactform" method="POST" class="container">
+<h1 class="display-5">Nota de pedido • Hilos de tejer 2020 - 2021</h1>
+<fieldset>
+    <div class="Datos container">
+    <div class="row">
+
+    <div class="col-12 col-sm-12 col-md-12 col-xl-12  d-flex justify-content-between"> <p>Nombre y Apellido :</p><input type="text" name="nombre" id="codigo" class="input-name input" placeholder="Escribe tu nombre y apellido completos" required></div>
+    <div class="col-12 col-sm-7 col-md-12 col-xl-7  d-flex justify-content-between mt-1"><p>Dirección :</p><input type="text" name="direccion" id="cliente" class="input-direccion input" placeholder="Escriba su dirección" required></div>
+    <div class="col-12 col-sm-5 col-md-12 col-xl-5  d-flex justify-content-between mt-1"><p>Vendedor :</p>
+<select name="vendedor" id="vendedor" style="width: 65%;" required>
+    <option value="ali">Ali Gerbolini</option>
+    <option value="ivan">Ivan</option>
+    <option value="franco">Franco J</option>
+    <option value="no">No tengo vendedor</option>
+</select></div>
+    <div class="col-12 col-sm-6 col-md-12 col-xl-4 d-flex justify-content-between mt-1"><p>Ciudad :</p><input type="text" name="ciudad"  id="ciudad" class="input-datos3 input" placeholder="Ciudad" required></div>
+    <div class="col-12 col-sm-6 col-md-12 col-xl-4 d-flex justify-content-between mt-1"><p>Provincia :</p><input type="text" name="provincia" id="provincia" class="input-datos3 input" placeholder="Provincia" required></div>
+    <div class="col-12 col-sm-6 col-md-12 col-xl-4 d-flex justify-content-between mt-1"><p>Dpto :</p><input type="text" name="departamento" id="departamento" class="input-datos3 input" placeholder="Departamento" required></div>
+    <div class="col-12 col-sm-7 col-md-12 col-xl-7  d-flex justify-content-between mt-1"><p>Correo :</p><input type="text" name="email" id="email" class="input-email input" placeholder="Correo de contacto y verificación de pedido" required></div>
+    <div class="col-12 col-sm-5 col-md-12 col-xl-5  d-flex justify-content-between mt-1"><p>Teléfono :</p><input type="text" name="telefono" id="telefono" class="input-phone input" placeholder="Escriba su nro de teléfono" required></div>
+</div>
+</div>
+<div>
+<div class="check1 col-12" >
+    <h2>FINO CABLÉ 50GR</h2>
+    <p>cod. 0838</p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">11008</p> <input type="text" name="hilos1" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">11163</p><input type="text" name="hilos2" class="check">    
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">11734</p><input type="text" name="hilos3" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">11845</p><input type="text" name="hilos4" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">12415</p><input type="text" name="hilos5" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">13446</p><input type="text" name="hilos6" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">15214</p><input type="text" name="hilos7" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">19147</p><input type="text" name="hilos8" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">22027</p><input type="text" name="hilos9" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">22077</p><input type="text" name="hilos10" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">22144</p> <input type="text" name="hilos11" class="check">
+    </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">22164</p><input type="text" name="hilos12" class="check" >    
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">22277</p><input type="text" name="hilos13" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">22354</p><input type="text" name="hilos14" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">22516</p><input type="text" name="hilos15" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">26244</p><input type="text" name="hilos16" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">26314</p><input type="text" name="hilos17" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33007</p><input type="text" name="hilos18" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33188</p><input type="text" name="hilos19" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33200</p><input type="text" name="hilos20" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33205</p> <input type="text" name="hilos21" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33254</p><input type="text" name="hilos22" class="check" >    
+    </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">33273</p><input type="text" name="hilos23" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33307</p><input type="text" name="hilos24" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33357</p><input type="text" name="hilos25" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33390</p><input type="text" name="hilos26" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33412</p><input type="text" name="hilos27" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33597</p><input type="text" name="hilos28" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33616</p><input type="text" name="hilos29" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">34508</p><input type="text" name="hilos30" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">36315</p> <input type="text" name="hilos31" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">37661</p><input type="text" name="hilos32" class="check" >    
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">44070</p><input type="text" name="hilos33" class="check" >
+    </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">44385</p><input type="text" name="hilos34" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">44716</p><input type="text" name="hilos35" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">45287</p><input type="text" name="hilos36" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">45499</p><input type="text" name="hilos37" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">45896</p><input type="text" name="hilos38" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">52405</p><input type="text" name="hilos39" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">54640</p><input type="text" name="hilos40" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">55091</p> <input type="text" name="hilos41" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">55474</p><input type="text" name="hilos42" class="check" >    
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">55628</p><input type="text" name="hilos43" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">55828</p><input type="text" name="hilos44" class="check" >
+    </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">62523</p><input type="text" name="hilos45" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">66004</p><input type="text" name="hilos46" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">66340</p><input type="text" name="hilos47" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">66344</p><input type="text" name="hilos48" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">66713</p><input type="text" name="hilos49" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">74586</p><input type="text" name="hilos50" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">77020</p><input type="text" name="hilos51" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">77100</p><input type="text" name="hilos52" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">88898</p><input type="text" name="hilos53" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">89947</p><input type="text" name="hilos54" class="check" >
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">89998</p><input type="text" name="hilos55" class="check" >
+    </label>
+</div>
+</div>
+</div>
+</div>
+<hr class="linea linea-oculta">
+<div class="check2 col-12">
+    <h2>MOLLET 50GR</h2>
+    <p>cod. 0839</p>
+    <div class="container">
+        <div class="row justify-content-between">
+        <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">11008</p> <input type="text" name="hilos56" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">11163</p><input type="text" name="hilos57" class="check">    
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">11734</p><input type="text" name="hilos58" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">11845</p><input type="text" name="hilos59" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">12415</p><input type="text" name="hilos60" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">13446</p><input type="text" name="hilos61" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">15214</p><input type="text" name="hilos62" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">19147</p><input type="text" name="hilos63" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">22027</p><input type="text" name="hilos64" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">22144</p><input type="text" name="hilos65" class="check">    
+</label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">22164</p><input type="text" name="hilos66" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">22277</p><input type="text" name="hilos67" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">22354</p><input type="text" name="hilos68" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">22516</p><input type="text" name="hilos69" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">26244</p><input type="text" name="hilos70" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">26314</p><input type="text" name="hilos71" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">33188</p><input type="text" name="hilos72" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">33200</p><input type="text" name="hilos73" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">33205</p><input type="text" name="hilos74" class="check" >    
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">33254</p><input type="text" name="hilos75" class="check" >
+</label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">33307</p><input type="text" name="hilos76" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">33357</p><input type="text" name="hilos77" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">33390</p><input type="text" name="hilos78" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">33412</p><input type="text" name="hilos79" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">33597</p><input type="text" name="hilos80" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">33616</p><input type="text" name="hilos81" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">34508</p><input type="text" name="hilos82" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">36315</p><input type="text" name="hilos83" class="check" >    
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">44070</p><input type="text" name="hilos84" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">44385</p><input type="text" name="hilos85" class="check" >
+</label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">44404</p><input type="text" name="hilos86" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">44716</p><input type="text" name="hilos87" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">45287</p><input type="text" name="hilos88" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">45499</p><input type="text" name="hilos89" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">45896</p><input type="text" name="hilos90" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">54640</p><input type="text" name="hilos91" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">55091</p><input type="text" name="hilos92" class="check" >    
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">55474</p><input type="text" name="hilos93" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">55628</p><input type="text" name="hilos94" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">55828</p><input type="text" name="hilos95" class="check" >
+</label>
+</div>
+<div class="d-flex flex-column">
+  <label class="content-input d-flex">
+      <p class="mr-3">62523</p><input type="text" name="hilos96" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">66004</p><input type="text" name="hilos97" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">66340</p><input type="text" name="hilos98" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">66344</p><input type="text" name="hilos99" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">66713</p><input type="text" name="hilos100" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">77020</p><input type="text" name="hilos101" class="check" >    
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">77100</p><input type="text" name="hilos102" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">88998</p><input type="text" name="hilos103" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">89947</p><input type="text" name="hilos104" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">89998</p><input type="text" name="hilos105" class="check" >
+</label>
+</div>
+</div>
+</div>
+</div>
+<hr class="linea-oculta">
+<div class="check3 col-12">
+    <h2>MIQUITA 50GR</h2>
+    <p>cod. 0835</p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">11163</p> <input type="text" name="hilos106" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">11501</p><input type="text" name="hilos107" class="check" >    
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">11570</p><input type="text" name="hilos108" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">11734</p><input type="text" name="hilos109" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">15214</p><input type="text" name="hilos110" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">19147</p><input type="text" name="hilos111" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">22202</p><input type="text" name="hilos112" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">22209</p><input type="text" name="hilos113" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">22215</p><input type="text" name="hilos114" class="check" >    
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">22221</p><input type="text" name="hilos115" class="check" >
+</label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">22223</p><input type="text" name="hilos116" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">22511</p><input type="text" name="hilos117" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">22532</p><input type="text" name="hilos118" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">23514</p><input type="text" name="hilos119" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">26314</p><input type="text" name="hilos120" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">32517</p><input type="text" name="hilos121" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">33004</p><input type="text" name="hilos122" class="check" >    
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">33015</p><input type="text" name="hilos123" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">33061</p><input type="text" name="hilos124" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">33072</p><input type="text" name="hilos125" class="check" >
+</label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">33188</p><input type="text" name="hilos126" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">33307</p><input type="text" name="hilos127" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">33353</p><input type="text" name="hilos128" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">33357</p><input type="text" name="hilos129" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">33359</p><input type="text" name="hilos130" class="check" >    
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">33531</p><input type="text" name="hilos131" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">33592</p><input type="text" name="hilos132" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">33833</p><input type="text" name="hilos133" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">36315</p><input type="text" name="hilos134" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">44404</p><input type="text" name="hilos135" class="check" >
+</label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">44436</p><input type="text" name="hilos136" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">44507</p><input type="text" name="hilos137" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">44510</p><input type="text" name="hilos138" class="check" >    
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">46078</p><input type="text" name="hilos139" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">53937</p><input type="text" name="hilos140" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">55016</p><input type="text" name="hilos141" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">55091</p><input type="text" name="hilos142" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">55300</p><input type="text" name="hilos143" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">55508</p><input type="text" name="hilos144" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">55509</p><input type="text" name="hilos145" class="check" >
+</label>
+</div>
+  <div class="d-flex flex-column">
+  <label class="content-input d-flex">
+    <p class="mr-3">55516</p><input type="text" name="hilos146" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">64586</p><input type="text" name="hilos147" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">66004</p><input type="text" name="hilos148" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">66344</p><input type="text" name="hilos149" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">66713</p><input type="text" name="hilos150" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">77100</p><input type="text" name="hilos151" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">88998</p><input type="text" name="hilos152" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">89947</p><input type="text" name="hilos153" class="check" >
+</label>
+</div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check5 col-12">
+    <h2>SOFIS SOFT 50GR</h2>
+    <p>cod. 0638</p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">12119</p> <input type="text" name="hilos154" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">19147</p><input type="text" name="hilos155" class="check" >    
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">23236</p><input type="text" name="hilos156" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">23239</p><input type="text" name="hilos157" class="check" >
+  </label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">33100</p><input type="text" name="hilos158" class="check" >    
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">33307</p><input type="text" name="hilos159" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">34121</p><input type="text" name="hilos160" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">34250</p><input type="text" name="hilos161" class="check" >
+  </label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">34459</p><input type="text" name="hilos162" class="check" >    
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">46068</p><input type="text" name="hilos163" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">46334</p><input type="text" name="hilos164" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">53161</p><input type="text" name="hilos165" class="check" >
+  </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+      <p class="mr-3">54320</p><input type="text" name="hilos166" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">55100</p><input type="text" name="hilos167" class="check" >    
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">89999</p><input type="text" name="hilos168" class="check" >
+  </label>
+</div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check6 col-12">
+    <h2>DECO CABLÉ LIGERO 50GR</h2>
+    <p>cod. 0807</p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">12864</p> <input type="text" name="hilos169" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">21183</p><input type="text" name="hilos170" class="check" >    
+  </label>
+</div>
+<div class="d-flex flex-column" >
+ <label class="content-input d-flex">
+      <p class="mr-3">23587</p><input type="text" name="hilos171" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">33342</p><input type="text" name="hilos172" class="check" >
+  </label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">35561</p><input type="text" name="hilos173" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">62523</p><input type="text" name="hilos174" class="check" >
+  </label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">66004</p><input type="text" name="hilos175" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">66340</p><input type="text" name="hilos176" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">88231</p><input type="text" name="hilos177" class="check" >    
+</label>
+</div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check7 col-12">
+    <h2>TEBAS 50GR</h2>
+    <p>cod. 0807</p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">17084</p> <input type="text" name="hilos178" class="check"  >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">28215</p><input type="text" name="hilos179" class="check" >    
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">36402</p><input type="text" name="hilos180" class="check" >
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">37391</p><input type="text" name="hilos181" class="check" >
+</label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+    <p class="mr-3">38534</p><input type="text" name="hilos182" class="check" >
+</label>
+  <label class="content-input d-flex">
+      <p class="mr-3">45597</p><input type="text" name="hilos183" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">52851</p><input type="text" name="hilos184" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">63194</p><input type="text" name="hilos185" class="check" >
+  </label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">73038</p><input type="text" name="hilos186" class="check" >    
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">78856</p><input type="text" name="hilos187" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">89982</p><input type="text" name="hilos188" class="check" >    
+</label>
+</div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check8 col-12">
+    <h2>KUCHI 100GR</h2>
+    <p>cod. 6229</p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">2181</p> <input type="text" name="hilos189" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">3001</p><input type="text" name="hilos190" class="check" >    
+  </label>
+</div>
+<div class="d-flex flex-column" >
+ <label class="content-input d-flex">
+      <p class="mr-3">3003</p><input type="text" name="hilos191" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">3102</p><input type="text" name="hilos192" class="check" >
+  </label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">3678</p><input type="text" name="hilos193" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">5002</p><input type="text" name="hilos194" class="check" >
+  </label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">7008</p><input type="text" name="hilos195" class="check" >
+  </label>
+</div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check9 col-12">
+    <h2>ALWA 100GR</h2>
+    <p>cod. 6163</p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">1028</p> <input type="text" name="hilos196" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">1352</p><input type="text" name="hilos197" class="check" >    
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">2405</p><input type="text" name="hilos198" class="check" >    
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">2561</p><input type="text" name="hilos199" class="check" >    
+</label>
+</div>
+<div class="d-flex flex-column" >
+ <label class="content-input d-flex">
+      <p class="mr-3">2607</p><input type="text" name="hilos200" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">3101</p><input type="text" name="hilos201" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">3246</p><input type="text" name="hilos202" class="check" >    
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">3303</p><input type="text" name="hilos203" class="check" >    
+</label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">3632</p><input type="text" name="hilos204" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">4305</p><input type="text" name="hilos205" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">5835</p><input type="text" name="hilos206" class="check" >    
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">6205</p><input type="text" name="hilos207" class="check" >    
+</label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">6206</p><input type="text" name="hilos208" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">7666</p><input type="text" name="hilos209" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">8111</p><input type="text" name="hilos210" class="check" >    
+</label>
+<label class="content-input d-flex">
+    <p class="mr-3">8112</p><input type="text" name="hilos211" class="check" >    
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check10 col-12">
+    <h2>NAZLI 100GR</h2>
+    <p>cod. 0611</p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">12107</p> <input type="text" name="hilos212" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">18958</p><input type="text" name="hilos213" class="check" >    
+  </label>
+</div>
+<div class="d-flex flex-column" >
+ <label class="content-input d-flex">
+      <p class="mr-3">21102</p><input type="text" name="hilos214" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">22104</p><input type="text" name="hilos215" class="check" >
+  </label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">24106</p><input type="text" name="hilos216" class="check" >
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">34101</p><input type="text" name="hilos217" class="check" >
+  </label>
+</div>
+<div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">34108</p><input type="text" name="hilos218" class="check" >
+  </label>
+  <label class="content-input d-flex">
+    <p class="mr-3">35957</p><input type="text" name="hilos219" class="check" >
+</label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">39959</p><input type="text" name="hilos220" class="check" >
+    </label>
+    <label class="content-input d-flex">
+      <p class="mr-3">42103</p><input type="text" name="hilos221" class="check" >
+  </label>
+  </div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check11 col-12">
+    <h2>PABIHLO 70GR</h2>
+    <p>cod. 0422</p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">88090</p> <input type="text" name="hilos222" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">89947</p><input type="text" name="hilos223" class="check" >    
+  </label>
+</div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check11 col-12">
+    <h2>COLORIL 70GR</h2>
+    <p>cod. 0421</p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">88090</p> <input type="text" name="hilos224" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">89947</p><input type="text" name="hilos225" class="check" >    
+  </label>
+</div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check12 col-12">
+    <h2>NUR </h2>
+    <p>cod. 6221</p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">88090</p> <input type="text" name="hilos226" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">89947</p><input type="text" name="hilos227" class="check" >    
+  </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">88090</p> <input type="text" name="hilos228" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">89947</p><input type="text" name="hilos229" class="check" >    
+    </label>
+  </div>
+  <div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">88090</p> <input type="text" name="hilos230" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">89947</p><input type="text" name="hilos231" class="check" >    
+    </label>
+  </div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check13 col-12">
+    <h2>GENOVA 100GR</h2>
+    <p>cod. 0648 </p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">11009</p> <input type="text" name="hilos232" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">22105</p><input type="text" name="hilos233" class="check" >    
+  </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">22605</p> <input type="text" name="hilos234" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33106</p><input type="text" name="hilos235" class="check" >    
+    </label>
+  </div>
+  <div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">33506</p> <input type="text" name="hilos236" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">44211</p><input type="text" name="hilos237" class="check" >    
+    </label>
+  </div>
+  <div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">89947</p> <input type="text" name="hilos238" class="check">
+    </label>
+  </div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check14 col-12">
+    <h2>BARI </h2>
+    <p>cod. 5311 </p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">10750</p> <input type="text" name="hilos239" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">20700</p><input type="text" name="hilos240" class="check" >    
+  </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">30780</p> <input type="text" name="hilos241" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">30790</p><input type="text" name="hilos242" class="check" >    
+    </label>
+  </div>
+  <div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">50760</p> <input type="text" name="hilos243" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">60740</p><input type="text" name="hilos244" class="check" >    
+    </label>
+  </div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check15 col-12">
+    <h2>TAHITI SPARK </h2>
+    <p>cod. 5312</p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">10780</p> <input type="text" name="hilos245" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">11920</p><input type="text" name="hilos246" class="check" >    
+  </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">60710</p> <input type="text" name="hilos247" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">70730</p><input type="text" name="hilos248" class="check" >    
+    </label>
+  </div>
+  <div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">70760</p> <input type="text" name="hilos249" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">89700</p><input type="text" name="hilos250" class="check" >    
+    </label>
+  </div>
+</div>
+</div>
+</div>
+<hr class="linea-oculta">
+<div class="check16 col-12">
+    <h2>SEVILLA (KATIA) </h2>
+    <p>cod. 5308 </p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">30350</p> <input type="text" name="hilos251" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">40780</p><input type="text" name="hilos252" class="check" >    
+  </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">70020</p> <input type="text" name="hilos253" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">90030</p><input type="text" name="hilos254" class="check" >    
+    </label>
+  </div>
+  <div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">90730</p> <input type="text" name="hilos255" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">90740</p><input type="text" name="hilos256" class="check" >    
+    </label>
+  </div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check17 col-12">
+    <h2>TAHITI SPRAY </h2>
+    <p>cod. 5313 </p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">11050</p> <input type="text" name="hilos257" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">21010</p><input type="text" name="hilos258" class="check" >    
+  </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">21090</p> <input type="text" name="hilos259" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">31040</p><input type="text" name="hilos260" class="check" >    
+    </label>
+  </div>
+  <div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">51110</p> <input type="text" name="hilos261" class="check">
+    </label>
+  </div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check18 col-12">
+    <h2>GUADALUPE (KATIA) </h2>
+    <p>cod. 5305 </p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">00101</p> <input type="text" name="hilos262" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">00102</p><input type="text" name="hilos263" class="check" >    
+  </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">00106</p> <input type="text" name="hilos264" class="check">
+    </label>
+  </div>
+</div>
+</div>
+</div>
+<hr class="linea">
+<div class="check13 col-12">
+    <h2>JUST DEGRADE (KATIA)</h2>
+    <p>cod. 5319 </p>
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="d-flex flex-column" >
+  <label class="content-input d-flex">
+      <p class="mr-3">11303</p> <input type="text" name="hilos265" class="check">
+  </label>
+  <label class="content-input d-flex">
+      <p class="mr-3">22305</p><input type="text" name="hilos266" class="check" >    
+  </label>
+</div>
+<div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">22306</p> <input type="text" name="hilos267" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">22307</p><input type="text" name="hilos268" class="check" >    
+    </label>
+  </div>
+  <div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">33300</p> <input type="text" name="hilos269" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">33301</p><input type="text" name="hilos270" class="check" >    
+    </label>
+  </div>
+  <div class="d-flex flex-column" >
+    <label class="content-input d-flex">
+        <p class="mr-3">55302</p> <input type="text" name="hilos271" class="check">
+    </label>
+    <label class="content-input d-flex">
+        <p class="mr-3">66304</p> <input type="text" name="hilos272" class="check">
+    </label>
+  </div>
+</div>
+</div>
+</div>
+<div>
+    <input type="checkbox" name="aceptarTerminos" required>
+    <label for="aceptarTerminos">Acepto haber revisado y elegido correctamente los productos indicados en esta nota de pedido</label>
+</div>
+</div>
+<div class="container d-flex justify-content-center " id="botones" style="background:white;">
+    <input type="button" class="btn btn-primary" id="imprimir" value="imprimir" onclick="window.print()">
+    <input type="submit" class="btn btn-primary" id="enviar" name="submit" value="Enviar">
+</div>
+</fieldset>
+</form>
+<div class="container-fluid" id="azul">
+    <div class="container mb-4 "> 
+        <img src="data/tren_logo.png" class="img-fluid mt-3" style="width: 100px; height: auto; "alt="">
+    </div>
+    <div class="container d-flex" id="footer">
+        <div class="col-9">
+    <h6 class=" ml-3">LIMA</h2>
+    <ul style="font-size:8px">
+        <li>Tel.:(511)336 7774 - (511)336 7776</li>
+        <li>Anexos Línea Labores 113-100</li>
+        <li>Anexos Línea Industrial: 111-100</li>
+      </ul>
+    </div>
+      <div class="col-3 d-flex">
+      <p id="register" class="text-right mt-4" style="font-size: 8px;">2020 Tren® Todos los Derechos Reservados</p>
+    </div>
+    </div>
+</div>
+</div>
+<?php
+include("correo.php;")
+?>
+</body>
+</html>
